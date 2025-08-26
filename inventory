@@ -1,3 +1,11 @@
+[fqdn]
 node201.home.munyak.me
 node202.home.munyak.me
 node203.home.munyak.me
+node204.home.munyak.me
+
+[hosts]
+node201
+node202
+node203
+node204
