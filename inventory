@@ -1,5 +1,9 @@
-[fqdn]
-node201.home.munyak.me ansible_hostname=node201
-node202.home.munyak.me ansible_hostname=node202
-node203.home.munyak.me ansible_hostname=node203
-node204.home.munyak.me ansible_hostname=node204
+[web_servers]
+node201.home.munyak.me
+node202.home.munyak.me
+
+[db_servers]
+node203.home.munyak.me
+
+[file_servers]
+node204.home.munyak.me
