@@ -1,6 +1,7 @@
 [web_servers]
 node201.home.munyak.me
 node202.home.munyak.me
+node204.home.munyak.me
 
 [db_servers]
 node203.home.munyak.me

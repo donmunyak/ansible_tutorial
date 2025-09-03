@@ -1,0 +1,35 @@
+---
+
+- hosts: web_servers
+  become: true
+  tasks:
+
+  - name: install httpd & php package (Centos)
+    tags: apache,httpd,Rocky,Centos
+    dnf:
+      name: 
+        - httpd
+        - php
+      state: latest
+    when: ansible_distribution in ['Rocky','Centos']
+
+  - name: start httpd (Centos)
+    tags: apache,httpd,Rocky,Centos
+    service: 
+      name: httpd
+      state: started
+    when: ansible_distribution in ['Rocky','Centos']
+
+  - name: copy default html file to site
+    tags: apache,apache2,httpd
+    copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
+
+- hosts: db_servers
+  become: true
+  tasks: 
+
